@@ -10,7 +10,7 @@ public class OrdezkatzeHiztegiaTest extends TestCase {
         ordezkatzeHiztegia = new OrdezkatzeHiztegia();
     }
 
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     public void testZifratu() {
