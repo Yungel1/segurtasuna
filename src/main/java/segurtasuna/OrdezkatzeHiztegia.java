@@ -16,8 +16,10 @@ public class OrdezkatzeHiztegia {
 
         for(int i=0;i<mezua.length();i++){
             letra=mezua.charAt(i);
-            posizioa=alfabetoa.indexOf(letra);
-            letra=gakoa.charAt(posizioa);
+            if (letra!=' ') {
+                posizioa = alfabetoa.indexOf(letra);
+                letra = gakoa.charAt(posizioa);
+            }
             kriptograma.append(letra);
         }
         return kriptograma.toString();
@@ -35,8 +37,10 @@ public class OrdezkatzeHiztegia {
 
         for(int i=0;i<kripto.length();i++){
             letra=kripto.charAt(i);
-            posizioa=gakoa.indexOf(letra);
-            letra=alfabetoa.charAt(posizioa);
+            if(letra!=' ') {
+                posizioa = gakoa.indexOf(letra);
+                letra = alfabetoa.charAt(posizioa);
+            }
             mezua.append(letra);
         }
         return mezua.toString();
