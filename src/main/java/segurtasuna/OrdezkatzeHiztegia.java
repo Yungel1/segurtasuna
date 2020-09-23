@@ -5,16 +5,14 @@ import java.util.Random;
 public class OrdezkatzeHiztegia {
 
     public String zifratu(String mezua){
-        //input: mezua, alfabetoa 26 letraz osatuta dagoelarik eta gakoa, zeinak 26 digitu izan behar dituen (alabetuko letrak)
-        String alfabetoa="abcdefghijklmnopqrstuvwxyz";
+        //input: mezua, alfabetoa 26 letraz osatuta dagoelarik eta gakoa.
+        //output: mezua zifratuta
+        String alfabetoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder kriptograma= new StringBuilder();
-        mezua=mezua.toLowerCase();
+        mezua=mezua.toUpperCase();
         char letra;
-        //gako bat sortu
-        String gakoa="defghijklmnopqrstuvwxyzabc";
-
+        String gakoa="ZXCVBNMASDFGHJKLQWERTYUIOP";
         //zifratu
-        gakoa=gakoa.toLowerCase();
         int posizioa;
         for(int i=0;i<mezua.length();i++){
             letra=mezua.charAt(i);
@@ -26,7 +24,23 @@ public class OrdezkatzeHiztegia {
     }
 
     public String deszifratu(String kripto){
-        return "";
+        //input: kriptograma, alfabetoa 26 letraz osatuta dagoelarik.
+        //output: mezua deszifratuta.
+        String alfabetoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder mezua= new StringBuilder();
+        kripto=kripto.toUpperCase();
+        char letra;
+
+        String gakoa="ZXCVBNMASDFGHJKLQWERTYUIOP";
+
+        int posizioa;
+        for(int i=0;i<kripto.length();i++){
+            letra=kripto.charAt(i);
+            posizioa=gakoa.indexOf(letra);
+            letra=alfabetoa.charAt(posizioa);
+            mezua.append(letra);
+        }
+        return mezua.toString();
     }
 
 }
