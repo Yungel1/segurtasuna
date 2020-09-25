@@ -5,11 +5,11 @@ import java.util.Random;
 public class OrdezkatzeHiztegia {
 
     private String gakoa="ZXCVBNMASDFGHJKLQWERTYUIOP";
+    private String alfabetoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public String zifratu(String mezua){
         //input: mezua, alfabetoa 26 letraz osatuta dagoelarik.
         //output: mezua zifratuta
-        String alfabetoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder kriptograma= new StringBuilder();
         mezua=mezua.toUpperCase();
         char letra;
@@ -29,7 +29,6 @@ public class OrdezkatzeHiztegia {
     public String deszifratu(String kripto){
         //input: kriptograma, alfabetoa 26 letraz osatuta dagoelarik.
         //output: mezua deszifratuta.
-        String alfabetoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder mezua= new StringBuilder();
         kripto=kripto.toUpperCase();
         char letra;
